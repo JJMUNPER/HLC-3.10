@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora simple
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+
+  <div id="container">
+    
+      <ion-label>Introduce un numero: </ion-label>
+      <ion-input [(ngModel)]="num1"></ion-input>
+    
+    
+      <ion-label>Introduce un numero: </ion-label>
+      <ion-input [(ngModel)]="num2"></ion-input>
+      
+    
+    
+      <ion-button class="boton" expand="block" *ngIf="resultado===0" (click)="suma()">Sumar</ion-button>
+      <ion-button class="boton" expand="block" *ngIf="resultado===0" (click)="resta()">Restar</ion-button>
+      <ion-button class="boton" expand="block" *ngIf="resultado===0" (click)="multiplicacion()">Multiplica</ion-button>
+      <ion-button class="boton" expand="block" *ngIf="resultado===0" (click)="division()">Division</ion-button>
+      <ion-button class="boton" expand="block" *ngIf="resultado!==0" (click)="reinicio()">Reinicia</ion-button>
+      
+      <p>El resultado de la suma es {{resultado}}</p>
+</div>
+</ion-content>
+  
+
