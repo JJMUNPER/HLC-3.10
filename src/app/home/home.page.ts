@@ -11,6 +11,8 @@ export class HomePage {
   num2:number=0;
   resultado:number=0;
 
+  // La suma del constructor da algun tipo de fallo, porque en lugar de sumar concatena ambos numeros
+
   constructor(){}
     suma(){
       this.resultado=this.num1 + this.num2;
